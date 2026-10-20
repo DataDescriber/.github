@@ -1,0 +1,48 @@
+name: "Improvement or new capability"
+description: "Describe a need, limitation, or desired outcome without requiring an implementation plan."
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Report in the repository responsible for the affected service or feature. Search its open and closed issues and relevant pull requests before filing; add related links below when useful. [Search DataDescriber issues](https://github.com/search?q=org%3ADataDescriber&type=issues).
+
+        Describe the problem here even when linking monitoring or support evidence. Do not include credentials, tokens, personal data, customer data, or unredacted logs/screenshots. Check the destination repository's visibility and use protected evidence sources for sensitive detail.
+
+        [Reporting and follow-up guidance](https://github.com/DataDescriber/.github/blob/main/CONTRIBUTING.md).
+
+        An idea is a proposal until accepted. Describe the need independently of a preferred solution; implementation design and verification belong in implementing PRs.
+  - type: textarea
+    id: need
+    attributes:
+      label: "Who needs what, and why?"
+      description: "Describe the user or operational need, the current limitation, and why it matters."
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: "Desired outcome"
+      description: "Describe the capability or behavior you want, preferably with a concrete scenario or example of success."
+    validations:
+      required: true
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: "Scope and open questions"
+      description: "Describe useful boundaries, exclusions, constraints, or unresolved product questions. Mark proposed scope as proposed."
+    validations:
+      required: false
+  - type: textarea
+    id: solution
+    attributes:
+      label: "Optional solution idea"
+      description: "If you have a preferred approach, explain it as a proposal rather than an accepted requirement. This field is optional."
+    validations:
+      required: false
+  - type: textarea
+    id: related
+    attributes:
+      label: "Related work and evidence"
+      description: "Link relevant existing issues, PRs, or permitted supporting material and summarize what they contribute. Maintainers will agree scope and acceptance criteria during triage."
+    validations:
+      required: false

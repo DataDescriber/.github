@@ -1,0 +1,62 @@
+name: "Bug or suspected incorrect behavior"
+description: "Report observed or suspected incorrect behavior, including unconfirmed monitoring signals."
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Report in the repository responsible for the affected service or feature. Search its open and closed issues and relevant pull requests before filing; add related links below when useful. [Search DataDescriber issues](https://github.com/search?q=org%3ADataDescriber&type=issues).
+
+        Describe the problem here even when linking monitoring or support evidence. Do not include credentials, tokens, personal data, customer data, or unredacted logs/screenshots. Check the destination repository's visibility and use protected evidence sources for sensitive detail.
+
+        [Reporting and follow-up guidance](https://github.com/DataDescriber/.github/blob/main/CONTRIBUTING.md).
+
+        You do not need a confirmed diagnosis or repeatable reproduction to report a suspected bug. Leave unknown optional details empty; distinguish a report from a confirmed reproduction.
+  - type: textarea
+    id: actual
+    attributes:
+      label: "What happened?"
+      description: "Describe what you were doing and the actual result. For a monitoring signal, summarize the observed failure and operation here."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: "What did you expect, and why?"
+      description: "Describe the expected behavior and its basis, such as documentation, earlier behavior, or the task you needed to complete. Say if the expected behavior is uncertain."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: "Reproduction, if known"
+      description: "Provide steps or conditions and say whether the behavior has been reproduced, is intermittent, or has only been observed once. Do not invent steps."
+    validations:
+      required: false
+  - type: textarea
+    id: environment
+    attributes:
+      label: "Environment and time"
+      description: "Include relevant service/environment, version, browser or platform, and observation time with timezone if known. For infrastructure issues, chart/Kubernetes/provider versions may help."
+    validations:
+      required: false
+  - type: textarea
+    id: impact
+    attributes:
+      label: "Impact"
+      description: "Describe the effect on the task, users, or operations. Include a known workaround if useful; distinguish confirmed impact from suspected impact."
+    validations:
+      required: false
+  - type: textarea
+    id: evidence
+    attributes:
+      label: "Evidence and uncertainty"
+      description: "Add a concise sanitized observation and permitted supporting links. Label hypotheses as hypotheses; diagnosis and investigation history belong in comments."
+    validations:
+      required: false
+  - type: textarea
+    id: related
+    attributes:
+      label: "Related work"
+      description: "Link potentially overlapping issues or PRs if known. Maintainers will confirm scope and verifiable closure criteria during triage."
+    validations:
+      required: false

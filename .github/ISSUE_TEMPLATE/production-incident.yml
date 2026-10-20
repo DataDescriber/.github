@@ -1,0 +1,67 @@
+name: "Production incident"
+description: "Report confirmed disruption or degradation in production."
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Report in the repository responsible for the affected service or feature. Search its open and closed issues and relevant pull requests before filing; add related links below when useful. [Search DataDescriber issues](https://github.com/search?q=org%3ADataDescriber&type=issues).
+
+        Describe the problem here even when linking monitoring or support evidence. Do not include credentials, tokens, personal data, customer data, or unredacted logs/screenshots. Check the destination repository's visibility and use protected evidence sources for sensitive detail.
+
+        [Reporting and follow-up guidance](https://github.com/DataDescriber/.github/blob/main/CONTRIBUTING.md).
+
+        Use this form for confirmed production impact. A monitoring alert without established disruption can be reported as a suspected bug. Do not delay established incident response to complete this form.
+  - type: textarea
+    id: observation
+    attributes:
+      label: "What happened?"
+      description: "Describe the affected operation and the observed failure. State facts separately from suspected causes."
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: "Observed impact"
+      description: "Who or what is affected, and how? State the known extent and any uncertainty; event counts alone do not establish affected-user counts."
+    validations:
+      required: true
+  - type: textarea
+    id: time-environment
+    attributes:
+      label: "When and where?"
+      description: "Give the observation time and timezone, service/environment, and version or release if known."
+    validations:
+      required: false
+  - type: dropdown
+    id: condition
+    attributes:
+      label: "Current impact"
+      description: "Select the latest observed condition. No new alerts alone does not prove recovery."
+      options:
+        - "Ongoing"
+        - "Mitigated"
+        - "Restored"
+        - "Unknown"
+    validations:
+      required: true
+  - type: textarea
+    id: condition-evidence
+    attributes:
+      label: "Current condition evidence"
+      description: "When was this condition last checked, and what observation supports it? Include a brief mitigation or restoration summary if known; put the investigation timeline in comments."
+    validations:
+      required: false
+  - type: textarea
+    id: evidence
+    attributes:
+      label: "Evidence and uncertainty"
+      description: "Summarize relevant facts and unknowns. Add permitted monitoring or report links for deeper context; the issue must remain understandable without opening them."
+    validations:
+      required: false
+  - type: textarea
+    id: related
+    attributes:
+      label: "Related work"
+      description: "Link existing incidents, bugs, or PRs if known. Triage will define closure criteria and whether restoration and permanent correction need separate issues."
+    validations:
+      required: false
