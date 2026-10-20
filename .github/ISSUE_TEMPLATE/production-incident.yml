@@ -42,6 +42,7 @@ body:
         - "Mitigated"
         - "Restored"
         - "Unknown"
+      default: 3
     validations:
       required: true
   - type: textarea
